@@ -1,0 +1,21 @@
+{
+	"name": "@volar/language-core",
+	"version": "1.0.8",
+	"main": "out/index.js",
+	"license": "MIT",
+	"files": [
+		"out/**/*.js",
+		"out/**/*.d.ts"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/johnsoncodehk/volar.git",
+		"directory": "packages/language-core"
+	},
+	"dependencies": {
+		"@volar/source-map": "1.0.8",
+		"@vue/reactivity": "^3.2.40",
+		"muggle-string": "^0.1.0"
+	},
+	"gitHead": "10d1a6a8b4011adee0a7c309da25caae7fb4fea9"
+}

@@ -1,15 +1,8 @@
 <script lang="ts" setup>
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="150" height="150" />
-
-    <div class="wrapper">
-      <HelloWorld />
-    </div>
-  </header>
+  <router-view></router-view>
 </template>
 
 <style scoped>
