@@ -1,0 +1,1 @@
+import{_ as e}from"./client-form.vue_vue_type_script_setup_true_lang.eca1fcea.js";import{d as o,c as s,e as a,a as t,o as c}from"./index.fdf600ff.js";const _={class:"px-4"},n=t("p",{class:"py-8 px-4"},"\xC0 propos de moi",-1),l=o({__name:"client",setup(p){return(r,i)=>(c(),s("div",_,[n,a(e)]))}});export{l as default};
