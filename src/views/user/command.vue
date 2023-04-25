@@ -10,12 +10,13 @@ import { useOrderStore } from '@/src/store/order.store';
 import type { Order, OrderItem } from '@/src/data/models/command';
 import { whenever } from '@vueuse/core';
 import _ from 'lodash';
+import { useClientStore } from '@/src/store/client.store';
 // import moment from 'moment'
 // import { v4 as uuidv4 } from 'uuid'
 const router = useRouter()
 const askForDelivery = ref(false)
 const toast = useToast()
-
+const clientStore = useClientStore()
 const orderStore = useOrderStore()
 
 const orderList = ref<OrderItem[]>([])
@@ -65,8 +66,8 @@ function substractQuantity(index: number) {
 function removeItem(item: OrderItem) {
     const t = item.quantity * item.item.price
     total.value -= t
-    _.remove(orderList.value,{item:item.item})
-    _.remove(orderStore.currentOrder,{id:item.item.id})
+    _.remove(orderList.value, { item: item.item })
+    _.remove(orderStore.currentOrder, { id: item.item.id })
 }
 
 loadOrders()
@@ -128,6 +129,7 @@ loadOrders()
 
                 <!-- <v-icon name="fa-location-arrow" class=""></v-icon> -->
                 <input type="text" class="bg-gray-100 px-4 py-2 rounded placeholder:text-xs focus:border-none"
+                    v-model="clientStore.client.location"
                     placeholder="Entrez le nom de votre quartier ou de votre localité">
 
 
