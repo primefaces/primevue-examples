@@ -15,7 +15,7 @@ function reachHome() {
 
       <p class="text-xl">Bienvue chez nous</p>
       <p class="text-xs">
-        Et duis et magna tempor culpa voluptate culpa culpa dolore elit nisi proident ullamco ad.
+       Commandez votre repas sans délai
       </p>
       <div>
 

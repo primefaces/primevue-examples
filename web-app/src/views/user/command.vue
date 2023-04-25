@@ -44,6 +44,7 @@ async function initProcess() {
 
 async function validateCommand() {
     toast.success("Votre commande a été prise en compte",)
+    orderStore.resetOrderList()
     showModal.value = false
 }
 function back() {

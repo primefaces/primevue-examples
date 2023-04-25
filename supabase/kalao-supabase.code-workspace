@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "supabase",
+			"path": "."
+		}
+	],
+	"settings": {
+		"deno.enable": true,
+		"deno.unstable": true
+	}
+}

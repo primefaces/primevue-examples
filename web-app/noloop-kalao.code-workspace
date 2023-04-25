@@ -7,5 +7,7 @@
 			"path": "../supabase"
 		}
 	],
-	"settings": {}
+	"settings": {
+		
+	}
 }

@@ -9,6 +9,7 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.21.0",
     "@vee-validate/zod": "^4.8.4",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
