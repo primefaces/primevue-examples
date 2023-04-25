@@ -1,37 +1,35 @@
 <script lang="ts" setup>
-// import {ref} from 'vue'
-// import { useToast } from "primevue/usetoast";
+import { useRouter } from 'vue-router';
 
-// const toast = useToast();
 
-// const increaseCount = () => {
-//   count.value++
+const router = useRouter()
 
-//   if(count.value === 3) {
-//     toast.add({severity:'success', summary: 'PrimeVue', detail:'Welcome to PrimeVue + Create Vue', life: 3000})
-//     count.value = 0
-//   }
-// }
-
-// const count = ref(0)
+function reachHome() {
+  router.replace({name: "signup"})
+}
 </script>
 
 <template>
-  <div class="greetings">
-  
-    <h3>
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a> +
-      <a href="https://www.primefaces.org/primevue/" target="_blank" rel="noopener">PrimeVue</a>.
-    </h3>
+  <div class="flex h-screen  items-center justify-center ">
+    <div class="flex flex-col text-center space-y-2">
 
+      <p class="text-xl">Bienvue chez nous</p>
+      <p class="text-xs">
+        Et duis et magna tempor culpa voluptate culpa culpa dolore elit nisi proident ullamco ad.
+      </p>
+      <div>
 
-    <!-- <Button @click="increaseCount" label="Count"></Button>
-    <h5 class="green">{{ count }}</h5> -->
+        <button class="bg-black text-white px-4 py-2 rounded" @click="reachHome">Valider</button>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
+.snackShadow {
+  box-shadow: 0px 10px 5px #dcdcdc, 0px -10px 5px #DCDCDC69;
+}
+
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
@@ -45,6 +43,7 @@ h3 {
 .green {
   margin-top: 20px;
 }
+
 button {
   margin-top: 20px;
 

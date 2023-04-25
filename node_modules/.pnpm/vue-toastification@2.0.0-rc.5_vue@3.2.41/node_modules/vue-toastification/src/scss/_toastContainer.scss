@@ -1,0 +1,92 @@
+@use "sass:math";
+
+.#{$vt-namespace}__container {
+  z-index: $vt-z-index;
+  position: fixed;
+  padding: 4px;
+  width: $vt-toast-max-width;
+  box-sizing: border-box;
+  display: flex;
+  min-height: 100%;
+  color: #fff;
+  flex-direction: column;
+  pointer-events: none;
+
+  @media #{$vt-not-mobile} {
+    &.top-left,
+    &.top-right,
+    &.top-center {
+      top: 1em;
+    }
+
+    &.bottom-left,
+    &.bottom-right,
+    &.bottom-center {
+      bottom: 1em;
+      flex-direction: column-reverse;
+    }
+
+    &.top-left,
+    &.bottom-left {
+      left: 1em;
+      .#{$vt-namespace}__toast {
+        margin-right: auto;
+      }
+      // Firefox does not apply rtl rules to containers and margins, it appears.
+      // See https://github.com/Maronato/vue-toastification/issues/179
+      @supports not (-moz-appearance:none) {
+        .#{$vt-namespace}__toast--rtl {
+          margin-right: unset;
+          margin-left: auto;
+        }
+      }
+    }
+
+    &.top-right,
+    &.bottom-right {
+      right: 1em;
+      .#{$vt-namespace}__toast {
+        margin-left: auto;
+      }
+      // Firefox does not apply rtl rules to containers and margins, it appears.
+      // See https://github.com/Maronato/vue-toastification/issues/179
+      @supports not (-moz-appearance:none) {
+        .#{$vt-namespace}__toast--rtl {
+          margin-left: unset;
+          margin-right: auto;
+        }
+      }
+    }
+
+    &.top-center,
+    &.bottom-center {
+      left: 50%;
+      margin-left: - math.div($vt-toast-max-width, 2);
+      .#{$vt-namespace}__toast {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  @media #{$vt-mobile} {
+    width: 100vw;
+    padding: 0;
+    left: 0;
+    margin: 0;
+    .#{$vt-namespace}__toast {
+      width: 100%;
+    }
+    &.top-left,
+    &.top-right,
+    &.top-center {
+      top: 0;
+    }
+    &.bottom-left,
+    &.bottom-right,
+    &.bottom-center {
+      bottom: 0;
+      flex-direction: column-reverse;
+    }
+  }
+}
