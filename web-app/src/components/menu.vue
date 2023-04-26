@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import _ from "lodash"
-
+import { supabase } from "@/src/data/supabase/client"
 import { useRouter } from "vue-router"
-import type { Item } from "../data/models/items"
 import { useOrderStore } from "../store/order.store"
+import { ref } from "vue"
+import type { Item } from "@/src/data/models/items"
 
 const orderStore = useOrderStore()
 const router = useRouter()
@@ -15,24 +16,24 @@ function reachProfile() {
   router.push({ name: "user-me" })
 }
 
-const menu: Item[] = [
-  {
-    id: "37fee742-785a-4302-bba7-5092ce6e3089",
-    description: "Montre-bracelet, dite “d'Aviateur”, métal inaltérable, diam. 435ym. Mouvement de précision chronographe, cadran avec grande aiguille trotteuse, permettant la lecture 1/25de seconde.",
-    likes: 12,
-    name: "Ayimolou",
-    price: 1000,
-    images: []
-  },
-  {
-    id: "37fee742-785a-4302-bba7-5092ce6e30800",
-    description: "Montre-bracelet, dite “d'Aviateur”, métal inaltérable, diam. 435ym. Mouvement de précision chronographe, cadran avec grande aiguille trotteuse, permettant la lecture 1/25de seconde.",
-    likes: 12,
-    name: "Ema koumé",
-    price: 2000,
-    images: []
-  }
-]
+const menu = ref<Item[]>([])
+//   {
+//     id: "37fee742-785a-4302-bba7-5092ce6e3089",
+//     description: "Montre-bracelet, dite “d'Aviateur”, métal inaltérable, diam. 435ym. Mouvement de précision chronographe, cadran avec grande aiguille trotteuse, permettant la lecture 1/25de seconde.",
+//     likes: 12,
+//     name: "Ayimolou",
+//     price: 1000,
+//     images: []
+//   },
+//   {
+//     id: "37fee742-785a-4302-bba7-5092ce6e30800",
+//     description: "Montre-bracelet, dite “d'Aviateur”, métal inaltérable, diam. 435ym. Mouvement de précision chronographe, cadran avec grande aiguille trotteuse, permettant la lecture 1/25de seconde.",
+//     likes: 12,
+//     name: "Ema koumé",
+//     price: 2000,
+//     images: []
+//   }
+// ]
 
 function addItemToOrder(menu: Item) {
   const index = _.findIndex(orderStore.currentOrder, { id: menu.id })
@@ -46,19 +47,41 @@ function isSelected(id: string): boolean {
   const index = _.findIndex(orderStore.currentOrder, { id: id })
   return index !== -1;
 }
+
+async function loadMenu() {
+  const res = await supabase.from('menu')
+    .select('*').order("price", { ascending: true })
+  console.log(res.data);
+  if (res.data) {
+    menu.value = []
+    res.data.forEach(element => {
+      menu.value.push({
+        price: element.price,
+        created_at: element.created_at,
+        description: element.description,
+        id: element.id,
+        isAvailable: element.isAvailable,
+        likes: element.likes,
+        name: element.name??""
+      })
+    });
+  }
+supabase.functions.invoke("client-app/types",{method:"GET"})
+}
+
+loadMenu()
+
 </script>
 
 
 <template>
-<div>
+  <div>
     <div class="px-4 pt-5 relative">
       <p class="text-xs text-gray-300 animate-none pb-2 ">Touchez pour ajouter au panier</p>
       <div class="space-y-3 overflow-y-auto ">
-
-
         <div
-          class="flex justify-start items-start px-4 py-2  border w-full rounded-lg overflow-clip duration-500 transition"
-          :class="{ 'bg-gray-200 shadow-xl': isSelected(item.id) }" @click="addItemToOrder(item)"
+          class="flex justify-start items-start px-4 py-2   w-full rounded-lg overflow-clip duration-500 transition bg-slate-100"
+          :class="{ 'bg-gray-200 shadow-xl border': isSelected(item.id) }" @click="addItemToOrder(item)"
           v-for="(item, index) in menu" :key="index">
           <img src="https://primefaces.org/cdn/primevue/images/galleria/galleria7.jpg" alt="Image"
             class="rounded-lg w-14 h-14" />
@@ -94,5 +117,5 @@ function isSelected(id: string): boolean {
         <div class="pr-4"> <v-icon name="fa-chevron-right"></v-icon> </div>
       </div>
     </div>
-</div>
+  </div>
 </template>

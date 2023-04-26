@@ -5,13 +5,13 @@ import Dialog from 'primevue/dialog';
 import { useToast } from "vue-toastification";
 import { useRouter } from 'vue-router';
 import { useOrderStore } from '@/src/store/order.store';
-import type { Order, OrderItem } from '@/src/data/models/command';
+import type { Order,  OrderRequest } from '@/src/data/models/command';
 import { whenever } from '@vueuse/core';
 import _ from 'lodash';
 import { useClientStore } from '@/src/store/client.store';
 import type { Item } from '@/src/data/models/items';
-// import moment from 'moment'
-// import { v4 as uuidv4 } from 'uuid'
+import { supabase } from '@/src/data/supabase/client';
+import type { OrderItem } from '@/src/data/models/request';
 const router = useRouter()
 const askForDelivery = ref(false)
 const toast = useToast()
@@ -27,7 +27,7 @@ function loadOrders() {
             quantity: 1
         }
         const itemTotalPrice = element.price
-        total.value += itemTotalPrice
+        total.value += itemTotalPrice!
         orderList.value.push(data)
     });
 }
@@ -43,8 +43,33 @@ async function initProcess() {
 }
 
 async function validateCommand() {
-    toast.success("Votre commande a été prise en compte",)
+    if (orderList.value.length === 0) {
+        return;
+    }
+    const request: OrderRequest = {
+        location: clientStore.client.location ?? null,
+        clientId: clientStore.client.id!,
+        items: Object.entries(orderList.value).map(([key, value]) => ({
+            menu_id: value.item.id,
+            quantity: value.quantity
+        }))
+
+    }
+    console.log(request)
+
+    const res = await supabase.functions.invoke("client-app/new-command", {
+        method: "POST", body: JSON.stringify(request),
+    })
+    if (res.error) {
+        console.log(res.error)
+        console.log(res.data)
+        toast.error("Une erreur s'est produite lors de la commande",)
+        return;
+    }
+    orderList.value = []
     orderStore.resetOrderList()
+    toast.success("Votre commande a été prise en compte",)
+
     showModal.value = false
 }
 function back() {
@@ -53,7 +78,7 @@ function back() {
 
 function addQuantity(index: number) {
     orderList.value[index].quantity++
-    total.value += orderList.value[index].item.price
+    total.value += orderList.value[index].item.price!
 
 }
 function substractQuantity(index: number) {
@@ -61,11 +86,11 @@ function substractQuantity(index: number) {
         return;
     }
     orderList.value[index].quantity--
-    total.value -= orderList.value[index].item.price
+    total.value -= orderList.value[index].item.price!
 }
 
 function removeItem(item: OrderItem) {
-    const t = item.quantity * item.item.price
+    const t = item.quantity * item.item.price!
     total.value -= t
     _.remove(orderList.value, { item: item.item })
     _.remove(orderStore.currentOrder, { id: item.item.id })

@@ -4,13 +4,15 @@ import Checkbox from 'primevue/checkbox';
 import Dialog from 'primevue/dialog';
 import { useToast } from "vue-toastification";
 import { useRouter } from 'vue-router';
-
+import { useClientStore } from '../store/client.store';
+import { supabase } from '../data/supabase/client';
 
 const router = useRouter()
 const askForDelivery = ref(false)
 const toast = useToast()
 const showModal = ref(false)
 const total = ref(0)
+const clientStore = useClientStore()
 async function initProcess() {
     if (askForDelivery.value) {
         showModal.value = true
@@ -21,12 +23,16 @@ async function initProcess() {
     }
 }
 async function validateCommand() {
+
+
     toast.success("Votre commande a été prise en compte",)
     showModal.value = false
 }
 function back() {
     router.back()
 }
+
+
 </script>
 <template>
     <div class="relative h-full ">
