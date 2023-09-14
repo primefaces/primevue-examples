@@ -1,12 +1,9 @@
 export default defineNuxtConfig({
+  devtools: { enabled: true },
   css: [
-    'primevue/resources/themes/saga-blue/theme.css',
-    'primevue/resources/primevue.css',
-    'primeicons/primeicons.css',
-    'primeflex/primeflex.css'
+    'primevue/resources/themes/lara-dark-teal/theme.css'
   ],
   build: {
     transpile: ['primevue']
-  },
-  ssr: false
+  }
 })

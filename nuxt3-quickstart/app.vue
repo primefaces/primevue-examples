@@ -1,27 +1,25 @@
 <template>
 	<div class="container">
-		<div class="flex flex-column align-items-center mt-1">
-			<img alt="Vue logo" src="./assets/primevue-logo.png" />
+		<div class="card">
+			<img alt="Vue logo" src="./assets/primevue-logo.png" height="90" />
 			<Toast />
 
-			<div class="mt-4">
-				<form @submit.prevent="greet">
-					<InputText type="text" v-model="text" />
-					<Button type="submit" label="Submit" />
-				</form>
-			</div>
+			<form @submit.prevent="greet">
+				<InputText type="text" v-model="text" placeholder="Name" />
+				<Button type="submit" label="Submit" />
+			</form>
 		</div>
 	</div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from "vue";
 import { useToast } from "primevue/usetoast";
 
 const text = ref();
 const toast = useToast();
 const greet = () => {
-	toast.add({ severity: "info", summary: "Hello " + text.value });
+	toast.add({ severity: "success", summary: "Welcome", detail: text.value });
 };
 </script>
 
@@ -32,5 +30,22 @@ const greet = () => {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: var(--surface-ground);
+}
+
+.card {
+	display: flex; 
+	flex-direction: column; 
+	align-items: center; 
+	gap: 3rem; 
+	border: 1px solid var(--surface-border); 
+	background-color: var(--surface-card);
+	padding: 3rem; 
+	border-radius: 1rem
+}
+
+form {
+	display: flex;
+	gap: 1rem;
 }
 </style>
