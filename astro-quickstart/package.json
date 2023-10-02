@@ -14,7 +14,7 @@
     "astro": "^2.1.2",
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",
-    "primevue": "^3.24.0",
+    "primevue": "^3.35.0",
     "vue": "^3.2.47"
   }
 }

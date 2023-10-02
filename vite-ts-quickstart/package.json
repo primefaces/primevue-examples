@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "primeicons": "^6.0.1",
-    "primevue": "^3.18.1",
+    "primevue": "^3.35.0",
     "vue": "^3.2.41"
   },
   "devDependencies": {
