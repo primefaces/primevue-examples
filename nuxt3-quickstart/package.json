@@ -9,7 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "primevue": "^3.34.1"
+    "primevue": "^3.35.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
