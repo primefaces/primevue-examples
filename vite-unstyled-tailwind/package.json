@@ -1,5 +1,5 @@
 {
-  "name": "primevue-unocss",
+  "name": "vite-unstyled-tailwind",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,7 +14,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
-    "unocss": "^0.55.7",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29",
+    "tailwindcss": "^3.3.3",
     "vite": "^4.4.5"
   }
 }

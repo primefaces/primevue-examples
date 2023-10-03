@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxt-styled-tailwind",
   "private": true,
   "type": "module",
   "scripts": {

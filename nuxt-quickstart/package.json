@@ -1,5 +1,5 @@
 {
-  "name": "primevue-quickstart-nuxt3",
+  "name": "nuxt-quickstart",
   "version": "1.0.0",
   "scripts": {
     "build": "nuxt build",
