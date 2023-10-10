@@ -29,146 +29,148 @@ function startAnimation() {
 </script>
 
 <template>
-  <div class="main-container">
-    <div class="hero-section">
-      <div class="logo">
-        <img src="./assets/PrimeVue.svg" alt="logo" />
-        <img src="./assets/primevue-text-white.svg" alt="logo-text" />
-      </div>
-      <div class="hero-content">
-        <h1>Start your next project with powerful PrimeVue</h1>
-        <span
-          >We strongly advise you to explore the
-          <a
-            href="https://primevue.org/configuration/"
-            target="_blank"
-            class="doc-text"
-            >PrimeVue documentation</a
+  <div class="main-wrapper">
+    <div class="main-container">
+      <div class="hero-section">
+        <div class="logo">
+          <img src="./assets/PrimeVue.svg" alt="logo" />
+          <img src="./assets/primevue-text-white.svg" alt="logo-text" />
+        </div>
+        <div class="hero-content">
+          <h1>Start your next project with powerful PrimeVue</h1>
+          <span
+            >We strongly advise you to explore the
+            <a
+              href="https://primevue.org/configuration/"
+              target="_blank"
+              class="doc-text"
+              >PrimeVue documentation</a
+            >
+            to enhance your skills.</span
           >
-          to enhance your skills.</span
-        >
+        </div>
+      </div>
+
+      <div class="grid-section">
+        <div id="components" class="card forms">
+          <div class="form-wrapper">
+            <span class="p-float-label form-input-wrapper">
+              <InputText id="username" class="form-input" v-model="value" />
+              <label for="username">Username</label>
+            </span>
+            <Button class="form-button p-button-sm" label="Button" />
+          </div>
+
+          <a
+            href="https://primevue.org/installation"
+            target="_blank"
+            class="card-footer-link"
+          >
+            <span>Components</span>
+            <i class="pi pi-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="card primeland">
+          <a href="https://discord.gg/j2DQFtPD8z" target="_blank">
+            <img src="./assets/primeland.svg" alt="primeland" />
+          </a>
+        </div>
+
+        <div class="card discussions">
+          <a
+            href="https://github.com/orgs/primefaces/discussions"
+            target="_blank"
+          >
+            <img src="./assets/discussions.svg" alt="primeland" />
+          </a>
+        </div>
+
+        <div class="card github">
+          <div class="github-wrapper" @mouseenter="startAnimation">
+            <img src="./assets/github.svg" alt="github" />
+            <div id="charging" class="stars"></div>
+          </div>
+          <a
+            href="https://github.com/primefaces/primevue"
+            target="_blank"
+            class="card-footer-link"
+          >
+            <span>Please star PrimeVue on GitHub</span>
+            <i class="pi pi-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="card templates">
+          <img
+            src="./assets/primetemplates.png"
+            alt="prime-template"
+            class="box-image"
+          />
+          <a
+            href="https://primevue.org/templates/"
+            target="_blank"
+            class="card-footer-link"
+          >
+            <span>Vue Templates Powered by PrimeVue</span>
+            <i class="pi pi-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="card blocks">
+          <img
+            src="./assets/primeblocks.png"
+            alt="prime-template"
+            class="box-image"
+          />
+
+          <a
+            href="https://blocks.primevue.org/"
+            target="_blank"
+            class="card-footer-link"
+          >
+            <span>400+ Ready to Use UI Blocks</span>
+            <i class="pi pi-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="card primeone">
+          <img
+            src="./assets/primeone.png"
+            alt="prime-template"
+            class="box-image"
+          />
+          <a
+            href="https://primevue.org/uikit/"
+            target="_blank"
+            class="card-footer-link"
+          >
+            <span>Figma UI Kit</span>
+            <i class="pi pi-arrow-right"></i>
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="grid-section">
-      <div id="components" class="card forms">
-        <div class="form-wrapper">
-          <span class="p-float-label form-input-wrapper">
-            <InputText id="username" class="form-input" v-model="value" />
-            <label for="username">Username</label>
-          </span>
-          <Button class="form-button p-button-sm" label="Button" />
+    <div class="footer">
+      <div class="footer-content">
+        <a href="" class="license">PrimeVue - MIT License</a>
+
+        <a class="footer-logo">
+          <img src="./assets/PrimeVue.svg" alt="logo" />
+        </a>
+
+        <div class="socials">
+          <a href="">
+            <i class="pi pi-github"></i>
+          </a>
+          <a href="">
+            <i class="pi pi-discord"></i>
+          </a>
+          <a href="">
+            <i class="pi pi-twitter"></i>
+          </a>
         </div>
-
-        <a
-          href="https://primevue.org/installation"
-          target="_blank"
-          class="card-footer-link"
-        >
-          <span>Components</span>
-          <i class="pi pi-arrow-right"></i>
-        </a>
-      </div>
-
-      <div class="card primeland">
-        <a href="https://discord.gg/j2DQFtPD8z" target="_blank">
-          <img src="./assets/primeland.svg" alt="primeland" />
-        </a>
-      </div>
-
-      <div class="card discussions">
-        <a
-          href="https://github.com/orgs/primefaces/discussions"
-          target="_blank"
-        >
-          <img src="./assets/discussions.svg" alt="primeland" />
-        </a>
-      </div>
-
-      <div class="card github">
-        <div class="github-wrapper" @mouseenter="startAnimation">
-          <img src="./assets/github.svg" alt="github" />
-          <div id="charging" class="stars"></div>
-        </div>
-        <a
-          href="https://github.com/primefaces/primevue"
-          target="_blank"
-          class="card-footer-link"
-        >
-          <span>Please star PrimeVue on GitHub</span>
-          <i class="pi pi-arrow-right"></i>
-        </a>
-      </div>
-
-      <div class="card templates">
-        <img
-          src="./assets/primetemplates.png"
-          alt="prime-template"
-          class="box-image"
-        />
-        <a
-          href="https://primevue.org/templates/"
-          target="_blank"
-          class="card-footer-link"
-        >
-          <span>Vue Templates Powered by PrimeVue</span>
-          <i class="pi pi-arrow-right"></i>
-        </a>
-      </div>
-
-      <div class="card blocks">
-        <img
-          src="./assets/primeblocks.png"
-          alt="prime-template"
-          class="box-image"
-        />
-
-        <a
-          href="https://blocks.primevue.org/"
-          target="_blank"
-          class="card-footer-link"
-        >
-          <span>400+ Ready to Use UI Blocks</span>
-          <i class="pi pi-arrow-right"></i>
-        </a>
-      </div>
-
-      <div class="card primeone">
-        <img
-          src="./assets/primeone.png"
-          alt="prime-template"
-          class="box-image"
-        />
-        <a
-          href="https://primevue.org/uikit/"
-          target="_blank"
-          class="card-footer-link"
-        >
-          <span>Figma UI Kit</span>
-          <i class="pi pi-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">
-    <div class="footer-content">
-      <a href="" class="license">PrimeVue - MIT License</a>
-
-      <a class="footer-logo">
-        <img src="./assets/PrimeVue.svg" alt="logo" />
-      </a>
-
-      <div class="socials">
-        <a href="">
-          <i class="pi pi-github"></i>
-        </a>
-        <a href="">
-          <i class="pi pi-discord"></i>
-        </a>
-        <a href="">
-          <i class="pi pi-twitter"></i>
-        </a>
       </div>
     </div>
   </div>
