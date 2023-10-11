@@ -1,16 +1,15 @@
-import Button from "primevue/button"
-import PrimeVue from "primevue/config"
-import Toast from "primevue/toast"
-import ToastService from "primevue/toastservice"
-import InputText from "primevue/inputtext"
+import Button from "primevue/button";
+import PrimeVue from "primevue/config";
 
+import InputText from "primevue/inputtext";
+import "./assets/main.css";
 
+import "primevue/resources/themes/lara-dark-teal/theme.css";
 
 export default (app) => {
-  app.use(PrimeVue)
-  app.use(ToastService)
+  app.use(PrimeVue);
 
-  app.component("Button", Button)
-  app.component("Toast", Toast)
-  app.component("InputText", InputText)
-}
+  app.component("Button", Button);
+
+  app.component("InputText", InputText);
+};
