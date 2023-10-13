@@ -16,7 +16,7 @@ function startAnimation() {
   const intervalId = setInterval(function () {
     if (starCount < maxStars) {
       a.innerHTML +=
-        '<img src="src/assets/star-fill.svg" style="padding:0.7rem;" alt="1">';
+        '<img src="/assets/star-fill.svg" style="padding:0.7rem;" alt="1">';
       starCount++;
     } else {
       clearInterval(intervalId);
@@ -569,6 +569,8 @@ a {
     gap: 1.714rem;
     position: relative;
     z-index: 0;
+    justify-items: center;
+    max-width: 60.142rem;
   }
 
   .grid-section .card.forms {
