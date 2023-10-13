@@ -569,6 +569,8 @@ a {
     gap: 1.714rem;
     position: relative;
     z-index: 0;
+    justify-items: center;
+    max-width: 60.142rem;
   }
 
   .grid-section .card.forms {
