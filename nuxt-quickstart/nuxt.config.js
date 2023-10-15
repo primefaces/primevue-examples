@@ -11,7 +11,13 @@ export default defineNuxtConfig({
     "@/assets/main.css",
     "primeicons/primeicons.css",
   ],
-  build: {
-    transpile: ["primevue"],
-  },
+  modules: ['nuxt-primevue'],
+  primevue: {
+    options: {
+      ripple: true
+    },
+    components: {
+      include: ['InputText', 'Button']
+    }
+  }
 });
