@@ -17,6 +17,6 @@
     "@nuxtjs/tailwindcss": "6.8.0"
   },
   "dependencies": {
-    "primevue": "^3.35.0"
+    "primevue": "^3.37.0"
   }
 }
