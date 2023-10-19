@@ -33,7 +33,7 @@ function startAnimation() {
     <div class="main-container">
       <div class="hero-section">
         <div class="logo">
-          <img src="../assets/PrimeVue.svg" alt="logo" />
+          <img src="../assets/primevue.svg" alt="logo" />
           <img src="../assets/primevue-text-white.svg" alt="logo-text" />
         </div>
         <div class="hero-content">
@@ -161,7 +161,7 @@ function startAnimation() {
           >PrimeVue - MIT License</a
         >
         <a class="footer-logo">
-          <img src="../assets/PrimeVue.svg" alt="logo" />
+          <img src="../assets/primevue.svg" alt="logo" />
         </a>
 
         <div class="socials">
