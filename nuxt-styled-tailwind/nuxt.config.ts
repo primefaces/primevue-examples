@@ -2,8 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["primevue/resources/themes/lara-dark-indigo/theme.css"],
-  build: {
-    transpile: ["primevue"],
-  },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-primevue"],
+  primevue: {
+    components: {
+      include: ["Button"]
+  }
+}
 });

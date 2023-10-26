@@ -1,6 +1,5 @@
 {
   "name": "nuxt-styled-tailwind",
-  "private": true,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -11,12 +10,13 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "6.8.0",
     "nuxt": "^3.7.4",
+    "nuxt-primevue": "^0.1.0",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.5",
-    "@nuxtjs/tailwindcss": "6.8.0"
+    "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "primevue": "^3.37.0"
+    "primevue": "^3.38.0"
   }
 }
