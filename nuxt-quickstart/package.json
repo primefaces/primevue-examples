@@ -9,12 +9,12 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "primevue": "^3.35.0"
+    "primevue": "^3.38.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "nuxt": "^3.7.3",
-    "nuxt-primevue": "^0.0.3",
+    "nuxt-primevue": "^0.1.0",
     "primeicons": "^6.0.1"
   }
 }
