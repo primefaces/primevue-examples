@@ -1,11 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ["primevue/resources/themes/lara-dark-indigo/theme.css"],
   modules: ["@nuxtjs/tailwindcss", "nuxt-primevue"],
   primevue: {
+    cssLayerOrder: "tailwind-base, primevue, tailwind-utilities",
     components: {
-      include: ["Button"]
-  }
-}
+      exclude: ["Editor", "Chart"]
+    }
+  },
+  css: ["primevue/resources/themes/lara-dark-indigo/theme.css"]
 });
