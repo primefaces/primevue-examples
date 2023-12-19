@@ -1,12 +1,3 @@
-@layer tailwind-base {
-    @tailwind base;
-}
-
-@layer tailwind-utilities {
-    @tailwind utilities;
-    @tailwind variants;
-}
-
 :root {
     --primary-50: 236 253 245;
     --primary-100: 209 250 229;

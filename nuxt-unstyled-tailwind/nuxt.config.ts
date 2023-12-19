@@ -4,18 +4,15 @@ export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss', "nuxt-primevue"],
     primevue: {
         options: { unstyled: true },
-        cssLayerOrder: "tailwind-base, primevue, tailwind-utilities",
         importPT: { as: 'Lara', from: path.resolve(__dirname, './presets/lara/') },
         components: {
             exclude: ["Editor", "Chart"]
         }
     },
     tailwindcss: {
-        cssPath: '~/assets/css/tailwind.css',
         config: {
             content: [
-                "./presets/**/*.{js,vue,ts}",
-                "./node_modules/primevue/**/*.{vue,js,ts,jsx,tsx}"
+                "presets/**/*.{js,vue,ts}"
             ],
             theme: {
                 extend: {
