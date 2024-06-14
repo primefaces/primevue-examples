@@ -16,6 +16,7 @@
         "vue-router": "^4.2.5"
     },
     "dependencies": {
+        "@primevue/themes": "^4.0.0-rc.1",
         "primeicons": "^7.0.0",
         "primevue": "^4.0.0-rc.1"
     }
