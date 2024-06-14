@@ -1,6 +1,6 @@
 {
-  "extends": "astro/tsconfigs/base",
-  "compilerOptions": {
-    "jsx": "preserve"
-  }
+    "extends": "astro/tsconfigs/base",
+    "compilerOptions": {
+        "jsx": "preserve"
+    }
 }
