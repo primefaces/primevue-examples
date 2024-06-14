@@ -7,17 +7,17 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: false },
   css: [
-    "primevue/resources/themes/lara-dark-teal/theme.css",
     "@/assets/main.css",
     "primeicons/primeicons.css",
   ],
-  modules: ['nuxt-primevue'],
+  modules: ["@primevue/nuxt-module"],
   primevue: {
     options: {
       ripple: true
     },
+    importTheme: { from: "@/themes/my-theme.js" },
     components: {
-      include: ['InputText', 'Button']
+      include: ["InputText", "Button", "FloatLabel"]
     }
   }
 });
