@@ -1,3 +1,5 @@
+import Aura from '@primevue/themes/aura';
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -13,11 +15,11 @@ export default defineNuxtConfig({
   modules: ["@primevue/nuxt-module"],
   primevue: {
     options: {
+      theme: {
+        preset: Aura
+      },
       ripple: true
     },
-    importTheme: { from: "@/themes/my-theme.js" },
-    components: {
-      include: ["InputText", "Button", "FloatLabel"]
-    }
+    autoImport: true
   }
 });

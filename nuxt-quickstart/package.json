@@ -10,12 +10,12 @@
     },
     "devDependencies": {
         "@nuxt/devtools": "latest",
-        "@primevue/nuxt-module": "^4.0.0-rc.1",
+        "@primevue/nuxt-module": "^4.0.0-rc.3",
         "nuxt": "^3.12.1"
     },
     "dependencies": {
-        "@primevue/themes": "^4.0.0-rc.1",
+        "@primevue/themes": "^4.0.0-rc.3",
         "primeicons": "^7.0.0",
-        "primevue": "^4.0.0-rc.1"
+        "primevue": "^4.0.0-rc.3"
     }
 }
