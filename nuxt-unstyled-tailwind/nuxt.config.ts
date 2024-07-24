@@ -1,19 +1,15 @@
-import * as path from 'path';
+import * as path from "path";
 
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/tailwindcss', "nuxt-primevue"],
+    modules: ["@nuxtjs/tailwindcss", "@primevue/nuxt-module"],
     primevue: {
         options: { unstyled: true },
-        importPT: { as: 'Lara', from: path.resolve(__dirname, './presets/lara/') },
-        components: {
-            exclude: ["Editor", "Chart"]
-        }
+        importPT: { as: "Lara", from: path.resolve(__dirname, "./presets/lara/") },
+        autoImport: true,
     },
     tailwindcss: {
         config: {
-            content: [
-                "presets/**/*.{js,vue,ts}"
-            ],
+            content: ["presets/**/*.{js,vue,ts}"],
             theme: {
                 extend: {
                     colors: {
@@ -43,6 +39,6 @@ export default defineNuxtConfig({
                     },
                 },
             },
-        }
-    }
-})
+        },
+    },
+});
