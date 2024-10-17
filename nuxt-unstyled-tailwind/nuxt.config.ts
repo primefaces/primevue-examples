@@ -1,15 +1,16 @@
 import * as path from "path";
 
 export default defineNuxtConfig({
-    modules: ["@nuxtjs/tailwindcss", "@primevue/nuxt-module"],
+    modules: [ "@primevue/nuxt-module"],
+    css: ['@/assets/styles/tailwind.css', '@/assets/styles/base.css'],
     primevue: {
-        options: { unstyled: true },
-        importPT: { from: path.resolve(__dirname, "./presets/aura/") }
+        options: { theme: 'none' },
     },
-    tailwindcss: {
-        config: {
-            plugins: [require('tailwindcss-primeui')],
-            content: ["./presets/**/*.{js,vue,ts}"],
+    postcss: {
+        plugins: {
+            'postcss-import': {},
+            tailwindcss: {},
+            autoprefixer: {}
         }
     }
 });
