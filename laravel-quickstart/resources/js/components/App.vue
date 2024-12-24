@@ -1,0 +1,1 @@
+<template>Vue project</template>
