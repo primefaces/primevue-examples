@@ -15,8 +15,11 @@
         "vite": "^6.0"
     },
     "dependencies": {
+        "@primevue/themes": "^4.2.5",
         "@vitejs/plugin-vue": "^5.2.1",
         "@vue/compiler-sfc": "^3.5.13",
+        "primevue": "^4.2.5",
+        "tailwindcss-primeui": "^0.3.4",
         "vue": "^3.5.13"
     }
 }

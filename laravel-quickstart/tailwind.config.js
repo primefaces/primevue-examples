@@ -1,5 +1,3 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
-
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -9,12 +7,5 @@ export default {
         './resources/**/*.js',
         './resources/**/*.vue',
     ],
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
-        },
-    },
-    plugins: [],
+    plugins: [require('tailwindcss-primeui')]
 };
