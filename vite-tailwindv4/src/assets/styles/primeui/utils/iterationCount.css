@@ -1,0 +1,11 @@
+@utility animate-infinite {
+    animation-iteration-count: infinite;
+}
+
+@utility animate-once {
+    animation-iteration-count: 1;
+}
+
+@utility animate-twice {
+    animation-iteration-count: 2;
+} 

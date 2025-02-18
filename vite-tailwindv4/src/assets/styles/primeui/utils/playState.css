@@ -1,0 +1,7 @@
+@utility animate-running {
+    animation-play-state: running;
+}
+
+@utility animate-paused {
+    animation-play-state: paused;
+} 

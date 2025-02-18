@@ -1,0 +1,34 @@
+@utility bg-emphasis {
+  background: var(--p-content-hover-background);
+  color: var(--p-content-hover-color);
+}
+
+@utility bg-highlight {
+  background: var(--p-highlight-background);
+  color: var(--p-highlight-color);
+}
+
+@utility bg-highlight-emphasis {
+  background: var(--p-highlight-focus-background);
+  color: var(--p-highlight-focus-color);
+}
+
+@utility rounded-border {
+  border-radius: var(--p-content-border-radius);
+}
+
+@utility text-color {
+  color: var(--p-text-color);
+}
+
+@utility text-color-emphasis {
+  color: var(--p-text-hover-color);
+}
+
+@utility text-muted-color {
+  color: var(--p-text-muted-color);
+}
+
+@utility text-muted-color-emphasis {
+  color: var(--p-text-hover-muted-color);
+}

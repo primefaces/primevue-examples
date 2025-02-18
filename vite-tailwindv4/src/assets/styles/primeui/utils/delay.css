@@ -1,0 +1,9 @@
+@utility animate-delay-none { animation-delay: 0s; }
+@utility animate-delay-75 { animation-delay: 75ms; }
+@utility animate-delay-100 { animation-delay: 100ms; }
+@utility animate-delay-150 { animation-delay: 150ms; }
+@utility animate-delay-200 { animation-delay: 200ms; }
+@utility animate-delay-300 { animation-delay: 300ms; }
+@utility animate-delay-500 { animation-delay: 500ms; }
+@utility animate-delay-700 { animation-delay: 700ms; }
+@utility animate-delay-1000 { animation-delay: 1000ms; } 
