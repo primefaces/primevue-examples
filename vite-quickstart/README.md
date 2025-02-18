@@ -1,29 +1,73 @@
-# primevue-quickstart-create-vue
+# PrimeVue Vite Example
 
-This template should help get you started developing with Vue 3 in Vite.
+<br />
 
-## Recommended IDE Setup
+<div align="start">
+  
+![PrimeVue Version](https://img.shields.io/badge/PrimeVue-v4.2.5-blue)
+![Vue Version](https://img.shields.io/badge/Vue.js-v3.4.27-42b883)
+![Vite Version](https://img.shields.io/badge/Vite-v5.2.13-646cff)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+</div>
 
-## Customize configuration
+## Overview
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+This example demonstrates a basic PrimeVue integration with Vite, showcasing a modern and responsive dashboard interface. The project features various PrimeVue components with standard CSS styling.
 
-## Project Setup
+## Features
 
-```sh
+- PrimeVue components with CSS styling
+- Powered by Vite for fast development
+- Real-time search functionality
+- Customizable UI components
+
+## Tech Stack
+
+- [Vue.js](https://vuejs.org/) - The Progressive JavaScript Framework
+- [PrimeVue](https://primevue.org/) - The Ultimate Vue UI Component Library
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+
+## Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/primefaces/primevue-examples.git
+cd primevue-examples/vite-quickstart
+```
+
+2. Install dependencies:
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+3. Start the development server:
 
-```sh
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+4. Build for production:
 
-```sh
+```bash
 npm run build
 ```
+
+## Project Structure
+
+```
+vite-quickstart/
+├── src/
+│   ├── components/         # Vue components
+│   ├── assets/            # Static assets
+│   │   └── styles/        # CSS styles
+│   └── App.vue            # Root component
+├── public/                # Public static assets
+├── index.html            # Entry HTML file
+└── vite.config.js        # Vite configuration
+```
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/primefaces/primevue-examples/issues).

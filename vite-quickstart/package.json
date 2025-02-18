@@ -1,20 +1,23 @@
 {
-    "name": "primevue-quickstart-create-vue",
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview"
-    },
-    "dependencies": {
-        "@primevue/themes": "^4.0.0-rc.1",
-        "primeicons": "^7.0.0",
-        "primevue": "^4.0.0-rc.1",
-        "vue": "^3.4.27"
-    },
-    "devDependencies": {
-        "@vitejs/plugin-vue": "^5.0.5",
-        "vite": "^5.2.13"
-    }
+  "name": "primevue-vite-quickstart",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@primeuix/themes": "^0.1.0-beta.5",
+    "@primevue/core": "^4.2.5",
+    "@primevue/themes": "^4.2.5",
+    "chart.js": "^4.4.7",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.2.5",
+    "vue": "^3.4.27"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "vite": "^5.2.13"
+  }
 }
