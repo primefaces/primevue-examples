@@ -1,4 +1,4 @@
-# <img src="https://www.primefaces.org/wp-content/uploads/2019/12/primevue-logo.png" alt="PrimeVue logo" height="30" align="center"> PrimeVue + TailwindCSS v4 Example
+#  PrimeVue + TailwindCSS v4 Example
 
 <br />
 
@@ -76,5 +76,5 @@ vite-tailwindv4/
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/primefaces/primevue/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/primefaces/primevue-examples/issues).
 
