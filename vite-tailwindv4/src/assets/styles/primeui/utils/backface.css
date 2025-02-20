@@ -1,7 +1,0 @@
-@utility backface-visible {
-    backface-visibility: visible;
-}
-
-@utility backface-hidden {
-    backface-visibility: hidden;
-} 
