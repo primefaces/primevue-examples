@@ -1,16 +1,5 @@
 #  PrimeVue + TailwindCSS v4 Example
 
-<br />
-
-<div align="start">
-  
-![PrimeVue Version](https://img.shields.io/badge/PrimeVue-v4.2.5-blue)
-![Tailwind Version](https://img.shields.io/badge/TailwindCSS-v4.0.6-38bdf8)
-![Vue Version](https://img.shields.io/badge/Vue.js-v3.4.27-42b883)
-![Vite Version](https://img.shields.io/badge/Vite-v5.2.13-646cff)
-
-</div>
-
 ## Overview
 
 This example demonstrates how to integrate PrimeVue with TailwindCSS v4, showcasing a modern and responsive dashboard interface. The project features a dark/light theme toggle, responsive layout, and various PrimeVue components styled with TailwindCSS.
