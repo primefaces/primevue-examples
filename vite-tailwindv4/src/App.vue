@@ -1,15 +1,14 @@
 <script setup>
-import { ref, watch, onMounted } from "vue";
-import AppTopbar from "./components/AppTopbar.vue";
-import AppFooter from "./components/AppFooter.vue";
-import Card from "primevue/card";
-import InputText from "primevue/inputtext";
+import Chart from "primevue/chart";
+import Column from "primevue/column";
+import DataTable from "primevue/datatable";
 import IconField from "primevue/iconfield";
 import InputIcon from "primevue/inputicon";
-import DataTable from "primevue/datatable";
-import Column from "primevue/column";
+import InputText from "primevue/inputtext";
 import Tag from "primevue/tag";
-import Chart from "primevue/chart";
+import { onMounted, ref, watch } from "vue";
+import AppFooter from "./components/AppFooter.vue";
+import AppTopbar from "./components/AppTopbar.vue";
 import { useLayout } from "./composables/useLayout";
 
 const { primary, surface, isDarkMode } = useLayout();

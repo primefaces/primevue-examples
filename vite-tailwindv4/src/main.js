@@ -1,16 +1,16 @@
 import "./assets/styles/main.css";
 
-import { createApp } from "vue";
-import PrimeVue from "primevue/config";
-import App from "./App.vue";
-import Aura from "@primevue/themes/aura";
+import Aura from "@primeuix/themes/aura";
 import Button from "primevue/button";
-import InputText from "primevue/inputtext";
+import PrimeVue from "primevue/config";
 import FloatLabel from "primevue/floatlabel";
-import Toolbar from "primevue/toolbar";
-import ToggleSwitch from "primevue/toggleswitch";
+import InputText from "primevue/inputtext";
 import SelectButton from "primevue/selectbutton";
 import StyleClass from "primevue/styleclass";
+import ToggleSwitch from "primevue/toggleswitch";
+import Toolbar from "primevue/toolbar";
+import { createApp } from "vue";
+import App from "./App.vue";
 
 const app = createApp(App);
 
