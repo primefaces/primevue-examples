@@ -2,7 +2,6 @@
 import { ref, watch, onMounted } from "vue";
 import AppTopbar from "./components/AppTopbar.vue";
 import AppFooter from "./components/AppFooter.vue";
-import Card from "primevue/card";
 import InputText from "primevue/inputtext";
 import IconField from "primevue/iconfield";
 import InputIcon from "primevue/inputicon";
@@ -149,7 +148,7 @@ onMounted(() => {
                     <div class="stats-header">
                         <span class="stats-title">Total Orders</span>
                         <span class="stats-icon-box">
-                            <i class="pi pi-shopping-cart text-xl! leading-none!"></i>
+                            <i class="pi pi-shopping-cart"></i>
                         </span>
                     </div>
                     <div class="stats-content">
@@ -162,7 +161,7 @@ onMounted(() => {
                     <div class="stats-header">
                         <span class="stats-title">Active Users</span>
                         <span class="stats-icon-box">
-                            <i class="pi pi-users text-xl! leading-none!"></i>
+                            <i class="pi pi-users"></i>
                         </span>
                     </div>
                     <div class="stats-content">
@@ -175,7 +174,7 @@ onMounted(() => {
                     <div class="stats-header">
                         <span class="stats-title">Revenue</span>
                         <span class="stats-icon-box">
-                            <i class="pi pi-dollar text-xl! leading-none!"></i>
+                            <i class="pi pi-dollar"></i>
                         </span>
                     </div>
                     <div class="stats-content">
@@ -188,7 +187,7 @@ onMounted(() => {
                     <div class="stats-header">
                         <span class="stats-title">Success Rate</span>
                         <span class="stats-icon-box">
-                            <i class="pi pi-chart-line text-xl! leading-none!"></i>
+                            <i class="pi pi-chart-line"></i>
                         </span>
                     </div>
                     <div class="stats-content">
@@ -211,7 +210,7 @@ onMounted(() => {
                     <span class="chart-title">Recent Activity</span>
                     <div class="activity-list">
                         <div class="activity-item">
-                            <i class="activity-icon pi pi-shopping-cart text-primary"></i>
+                            <i class="activity-icon pi pi-shopping-cart"></i>
                             <div class="activity-content">
                                 <span class="activity-text">New order #1123</span>
                                 <span class="activity-time">2 minutes ago</span>

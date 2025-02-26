@@ -1,3 +1,13 @@
+<script setup>
+import { useLayout } from "../composables/useLayout";
+import AppConfig from "./AppConfig.vue";
+import StyleClass from "primevue/styleclass";
+import Button from "primevue/button";
+
+const { isDarkMode, toggleDarkMode } = useLayout();
+const vStyleclass = StyleClass;
+</script>
+
 <template>
     <div class="topbar">
         <div class="topbar-container">
@@ -49,19 +59,3 @@
         </div>
     </div>
 </template>
-
-<script setup>
-import { useLayout } from "../composables/useLayout";
-import AppConfig from "./AppConfig.vue";
-import StyleClass from "primevue/styleclass";
-
-const { isDarkMode, toggleDarkMode } = useLayout();
-</script>
-
-<script>
-export default {
-    directives: {
-        styleclass: StyleClass,
-    },
-};
-</script>
