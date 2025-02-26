@@ -6,9 +6,7 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createApp, h } from 'vue';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import PrimeVue from 'primevue/config';
-import Aura from '@primevue/themes/aura';
-import Button from 'primevue/button';
-import InputText from 'primevue/inputtext';
+import Aura from '@primeuix/themes/aura';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -25,11 +23,12 @@ createInertiaApp({
             .use(ZiggyVue)
             .use(PrimeVue, {
                 theme: {
-                    preset: Aura
+                    preset: Aura,
+                    options: {
+                        darkModeSelector: '.p-dark'
+                    }
                 }
             })
-            .component('Button', Button)
-            .component('InputText', InputText)
             .mount(el);
     },
     progress: {
