@@ -307,7 +307,7 @@ onMounted(() => {
                                         data.status === 'In Stock'
                                             ? 'success'
                                             : data.status === 'Low Stock'
-                                            ? 'warning'
+                                            ? 'warn'
                                             : 'danger'
                                     "
                                 >
