@@ -29,7 +29,9 @@ const { isDarkMode, toggleDarkMode } = useLayout();
                     ><span class="text-xl font-light text-surface-700 dark:text-surface-100 leading-none"
                         >PrimeVue Examples</span
                     >
-                    <span class="text-sm font-medium text-primary leading-tight">Vite + Tailwindcss v4</span></span
+                    <span class="text-sm font-medium text-primary leading-tight"
+                        >Nuxt Styled + Tailwindcss v3</span
+                    ></span
                 >
             </div>
             <div class="flex items-center gap-2">

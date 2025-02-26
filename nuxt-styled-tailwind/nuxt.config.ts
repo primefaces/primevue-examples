@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     tailwindcss: {
         config: {
             plugins: [PrimeUI],
-            darkMode: "class",
+            darkMode: ["class", ".p-dark"],
         },
     },
 });
