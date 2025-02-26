@@ -1,5 +1,5 @@
 import { updatePrimaryPalette, updateSurfacePalette } from "@primeuix/themes";
-import { computed, ref, watch } from "vue";
+import { computed, ref } from "vue";
 
 const appState = ref({
     primary: "emerald",
