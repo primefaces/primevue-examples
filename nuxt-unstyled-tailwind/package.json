@@ -9,17 +9,20 @@
         "postinstall": "nuxt prepare"
     },
     "devDependencies": {
-        "@primevue/nuxt-module": "^4.1.1",
+        "@primevue/nuxt-module": "^4.3.1",
         "autoprefixer": "^10.4.16",
+        "nuxt": "3.15.4",
         "postcss": "^8.4.31",
-        "postcss-import": "^16.1.0",
-        "nuxt": "3.12.1"
+        "postcss-import": "^16.1.0"
     },
     "dependencies": {
-        "primevue": "^4.1.1",
-        "vue": "^3.4.27",
-        "vue-router": "^4.2.5",
+        "@primeuix/themes": "^1.0.0",
+        "chart.js": "^4.4.8",
+        "primeicons": "^7.0.0",
+        "primevue": "^4.3.1",
         "tailwindcss": "^3.4.1",
-        "tailwindcss-primeui": "^0.3.4"
+        "tailwindcss-primeui": "^0.5.1",
+        "vue": "^3.4.27",
+        "vue-router": "^4.2.5"
     }
 }
