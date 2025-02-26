@@ -1,30 +1,23 @@
-<script lang="ts" setup>
-import HelloWorld from "./components/HelloWorld.vue";
+<script setup>
+import AppTopbar from "./components/AppTopbar.vue";
+import AppFooter from "./components/AppFooter.vue";
+import StatsWidget from "./components/dashboard/StatsWidget.vue";
+import SalesTrendWidget from "./components/dashboard/SalesTrendWidget.vue";
+import RecentActivityWidget from "./components/dashboard/RecentActivityWidget.vue";
+import ProductOverviewWidget from "./components/dashboard/ProductOverviewWidget.vue";
 </script>
 
 <template>
-    <header>
-        <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="150" height="150" />
-
-        <div class="wrapper">
-            <HelloWorld />
+    <div class="layout-container">
+        <AppTopbar />
+        <div class="layout-grid">
+            <StatsWidget />
+            <div class="layout-grid-row">
+                <SalesTrendWidget />
+                <RecentActivityWidget />
+            </div>
+            <ProductOverviewWidget />
         </div>
-    </header>
+        <AppFooter />
+    </div>
 </template>
-
-<style scoped>
-body #app header {
-    margin: 0;
-    padding: 0;
-}
-header {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.wrapper {
-    padding-left: 30px;
-}
-</style>
