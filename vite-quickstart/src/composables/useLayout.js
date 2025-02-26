@@ -1,15 +1,11 @@
-import { computed, ref, watch } from "vue";
+import { updatePrimaryPalette, updateSurfacePalette } from "@primeuix/themes";
+import { computed, ref } from "vue";
 
-const storedConfig = localStorage.getItem("primevue-appconfig");
-const initialState = storedConfig
-	? JSON.parse(storedConfig)
-	: {
-		primary: "emerald",
-		surface: null,
-		darkMode: false,
-	};
-
-const appState = ref(initialState);
+const appState = ref({
+	primary: "emerald",
+	surface: null,
+	darkMode: false
+});
 
 const primaryColors = ref([
 	{
@@ -25,8 +21,8 @@ const primaryColors = ref([
 			700: "#047857",
 			800: "#065f46",
 			900: "#064e3b",
-			950: "#022c22",
-		},
+			950: "#022c22"
+		}
 	},
 	{
 		name: "green",
@@ -41,8 +37,8 @@ const primaryColors = ref([
 			700: "#15803d",
 			800: "#166534",
 			900: "#14532d",
-			950: "#052e16",
-		},
+			950: "#052e16"
+		}
 	},
 	{
 		name: "lime",
@@ -57,8 +53,8 @@ const primaryColors = ref([
 			700: "#4d7c0f",
 			800: "#3f6212",
 			900: "#365314",
-			950: "#1a2e05",
-		},
+			950: "#1a2e05"
+		}
 	},
 	{
 		name: "orange",
@@ -73,8 +69,8 @@ const primaryColors = ref([
 			700: "#c2410c",
 			800: "#9a3412",
 			900: "#7c2d12",
-			950: "#431407",
-		},
+			950: "#431407"
+		}
 	},
 	{
 		name: "amber",
@@ -89,8 +85,8 @@ const primaryColors = ref([
 			700: "#b45309",
 			800: "#92400e",
 			900: "#78350f",
-			950: "#451a03",
-		},
+			950: "#451a03"
+		}
 	},
 	{
 		name: "yellow",
@@ -105,8 +101,8 @@ const primaryColors = ref([
 			700: "#a16207",
 			800: "#854d0e",
 			900: "#713f12",
-			950: "#422006",
-		},
+			950: "#422006"
+		}
 	},
 	{
 		name: "teal",
@@ -121,8 +117,8 @@ const primaryColors = ref([
 			700: "#0f766e",
 			800: "#115e59",
 			900: "#134e4a",
-			950: "#042f2e",
-		},
+			950: "#042f2e"
+		}
 	},
 	{
 		name: "cyan",
@@ -137,8 +133,8 @@ const primaryColors = ref([
 			700: "#0e7490",
 			800: "#155e75",
 			900: "#164e63",
-			950: "#083344",
-		},
+			950: "#083344"
+		}
 	},
 	{
 		name: "sky",
@@ -153,8 +149,8 @@ const primaryColors = ref([
 			700: "#0369a1",
 			800: "#075985",
 			900: "#0c4a6e",
-			950: "#082f49",
-		},
+			950: "#082f49"
+		}
 	},
 	{
 		name: "blue",
@@ -169,8 +165,8 @@ const primaryColors = ref([
 			700: "#1d4ed8",
 			800: "#1e40af",
 			900: "#1e3a8a",
-			950: "#172554",
-		},
+			950: "#172554"
+		}
 	},
 	{
 		name: "indigo",
@@ -185,8 +181,8 @@ const primaryColors = ref([
 			700: "#4338ca",
 			800: "#3730a3",
 			900: "#312e81",
-			950: "#1e1b4b",
-		},
+			950: "#1e1b4b"
+		}
 	},
 	{
 		name: "violet",
@@ -201,8 +197,8 @@ const primaryColors = ref([
 			700: "#6d28d9",
 			800: "#5b21b6",
 			900: "#4c1d95",
-			950: "#2e1065",
-		},
+			950: "#2e1065"
+		}
 	},
 	{
 		name: "purple",
@@ -217,8 +213,8 @@ const primaryColors = ref([
 			700: "#7e22ce",
 			800: "#6b21a8",
 			900: "#581c87",
-			950: "#3b0764",
-		},
+			950: "#3b0764"
+		}
 	},
 	{
 		name: "fuchsia",
@@ -233,8 +229,8 @@ const primaryColors = ref([
 			700: "#a21caf",
 			800: "#86198f",
 			900: "#701a75",
-			950: "#4a044e",
-		},
+			950: "#4a044e"
+		}
 	},
 	{
 		name: "pink",
@@ -249,8 +245,8 @@ const primaryColors = ref([
 			700: "#be185d",
 			800: "#9d174d",
 			900: "#831843",
-			950: "#500724",
-		},
+			950: "#500724"
+		}
 	},
 	{
 		name: "rose",
@@ -265,9 +261,9 @@ const primaryColors = ref([
 			700: "#be123c",
 			800: "#9f1239",
 			900: "#881337",
-			950: "#4c0519",
-		},
-	},
+			950: "#4c0519"
+		}
+	}
 ]);
 
 const surfaces = ref([
@@ -285,8 +281,8 @@ const surfaces = ref([
 			700: "#334155",
 			800: "#1e293b",
 			900: "#0f172a",
-			950: "#020617",
-		},
+			950: "#020617"
+		}
 	},
 	{
 		name: "gray",
@@ -302,8 +298,8 @@ const surfaces = ref([
 			700: "#374151",
 			800: "#1f2937",
 			900: "#111827",
-			950: "#030712",
-		},
+			950: "#030712"
+		}
 	},
 	{
 		name: "zinc",
@@ -319,8 +315,8 @@ const surfaces = ref([
 			700: "#3f3f46",
 			800: "#27272a",
 			900: "#18181b",
-			950: "#09090b",
-		},
+			950: "#09090b"
+		}
 	},
 	{
 		name: "neutral",
@@ -336,8 +332,8 @@ const surfaces = ref([
 			700: "#404040",
 			800: "#262626",
 			900: "#171717",
-			950: "#0a0a0a",
-		},
+			950: "#0a0a0a"
+		}
 	},
 	{
 		name: "stone",
@@ -353,8 +349,8 @@ const surfaces = ref([
 			700: "#44403c",
 			800: "#292524",
 			900: "#1c1917",
-			950: "#0c0a09",
-		},
+			950: "#0c0a09"
+		}
 	},
 	{
 		name: "soho",
@@ -370,8 +366,8 @@ const surfaces = ref([
 			700: "#616268",
 			800: "#4a4b52",
 			900: "#34343d",
-			950: "#1d1e27",
-		},
+			950: "#1d1e27"
+		}
 	},
 	{
 		name: "viva",
@@ -387,8 +383,8 @@ const surfaces = ref([
 			700: "#565a5b",
 			800: "#3e4244",
 			900: "#262b2c",
-			950: "#0e1315",
-		},
+			950: "#0e1315"
+		}
 	},
 	{
 		name: "ocean",
@@ -404,9 +400,9 @@ const surfaces = ref([
 			700: "#415B61",
 			800: "#29444E",
 			900: "#183240",
-			950: "#0c1920",
-		},
-	},
+			950: "#0c1920"
+		}
+	}
 ]);
 
 export function useLayout() {
@@ -428,15 +424,6 @@ export function useLayout() {
 	}
 
 	function toggleDarkMode() {
-		if (!document.startViewTransition) {
-			executeDarkModeToggle();
-			return;
-		}
-
-		document.startViewTransition(() => executeDarkModeToggle());
-	}
-
-	function executeDarkModeToggle() {
 		appState.value.darkMode = !appState.value.darkMode;
 		document.documentElement.classList.toggle("p-dark");
 	}
@@ -445,64 +432,17 @@ export function useLayout() {
 		if (type === "primary") {
 			setPrimary(colorName);
 			const color = primaryColors.value.find((c) => c.name === colorName);
-			updatePrimaryColors(color.palette);
+			updatePrimaryPalette(color.palette);
 		} else if (type === "surface") {
 			setSurface(colorName);
 			const surfaceColor = surfaces.value.find((s) => s.name === colorName);
-			updateSurfaceColors(surfaceColor.palette);
+			updateSurfacePalette(surfaceColor.palette);
 		}
 	}
-
-	function updatePrimaryColors(palette) {
-		const root = document.documentElement;
-		Object.entries(palette).forEach(([key, value]) => {
-			root.style.setProperty(`--p-primary-${key}`, value);
-		});
-	}
-
-	function updateSurfaceColors(palette) {
-		const root = document.documentElement;
-		Object.entries(palette).forEach(([key, value]) => {
-			root.style.setProperty(`--p-surface-${key}`, value);
-		});
-	}
-
-	watch(
-		[
-			() => appState.value.darkMode,
-			() => appState.value.primary,
-			() => appState.value.surface,
-		],
-		() => {
-			localStorage.setItem(
-				"primevue-appconfig",
-				JSON.stringify(appState.value)
-			);
-		},
-		{ deep: true }
-	);
 
 	const isDarkMode = computed(() => appState.value.darkMode);
 	const primary = computed(() => appState.value.primary);
 	const surface = computed(() => appState.value.surface);
-
-	if (storedConfig) {
-		if (appState.value.primary) {
-			const color = primaryColors.value.find(
-				(c) => c.name === appState.value.primary
-			);
-			if (color) updatePrimaryColors(color.palette);
-		}
-		if (appState.value.surface) {
-			const surfaceColor = surfaces.value.find(
-				(s) => s.name === appState.value.surface
-			);
-			if (surfaceColor) updateSurfaceColors(surfaceColor.palette);
-		}
-		if (appState.value.darkMode) {
-			setDarkMode(true);
-		}
-	}
 
 	return {
 		primaryColors,
@@ -514,6 +454,6 @@ export function useLayout() {
 		setDarkMode,
 		setPrimary,
 		setSurface,
-		updateColors,
+		updateColors
 	};
 }
