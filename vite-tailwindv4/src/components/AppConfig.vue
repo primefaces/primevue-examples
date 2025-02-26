@@ -1,7 +1,5 @@
 <script setup>
-import { ref, watch } from "vue";
 import { useLayout } from "../composables/useLayout";
-import { updatePrimaryPalette, updateSurfacePalette } from "@primeuix/themes";
 
 const { primaryColors, surfaces, preset, primary, surface, isDarkMode, updateColors } = useLayout();
 </script>

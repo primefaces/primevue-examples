@@ -414,15 +414,6 @@ export function useLayout() {
 		appState.value.surface = value;
 	}
 
-	function setDarkMode(value) {
-		appState.value.darkMode = value;
-		if (value) {
-			document.documentElement.classList.add("p-dark");
-		} else {
-			document.documentElement.classList.remove("p-dark");
-		}
-	}
-
 	function toggleDarkMode() {
 		appState.value.darkMode = !appState.value.darkMode;
 		document.documentElement.classList.toggle("p-dark");
@@ -451,7 +442,6 @@ export function useLayout() {
 		primary,
 		surface,
 		toggleDarkMode,
-		setDarkMode,
 		setPrimary,
 		setSurface,
 		updateColors
