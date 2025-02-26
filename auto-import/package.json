@@ -9,13 +9,14 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@primevue/themes": "^4.0.0-rc.1",
+        "@primeuix/themes": "^1.0.0",
+        "chart.js": "^4.4.8",
         "primeicons": "^7.0.0",
-        "primevue": "^4.0.0-rc.1",
+        "primevue": "^4.3.1",
         "vue": "^3.4.27"
     },
     "devDependencies": {
-        "@primevue/auto-import-resolver": "^4.0.0-beta.5",
+        "@primevue/auto-import-resolver": "^4.3.1",
         "@vitejs/plugin-vue": "^5.0.5",
         "unplugin-vue-components": "^0.27.0",
         "vite": "^5.2.13"

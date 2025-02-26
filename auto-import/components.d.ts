@@ -5,9 +5,17 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 export {}
 
-declare module 'vue' {
-  export interface GlobalComponents {
-    Button: typeof import('primevue/button')['default']
-    InputText: typeof import('primevue/inputtext')['default']
-  }
+declare module "vue" {
+    export interface GlobalComponents {
+        Button: typeof import("primevue/button")["default"];
+        Card: typeof import("primevue/card")["default"];
+        Chart: typeof import("primevue/chart")["default"];
+        Column: typeof import("primevue/column")["default"];
+        DataTable: typeof import("primevue/datatable")["default"];
+        IconField: typeof import("primevue/iconfield")["default"];
+        InputIcon: typeof import("primevue/inputicon")["default"];
+        InputText: typeof import("primevue/inputtext")["default"];
+        FloatLabel: typeof import("primevue/floatlabel")["default"];
+        Tag: typeof import("primevue/tag")["default"];
+    }
 }
