@@ -1,3 +1,12 @@
+<script setup>
+import AppFooter from "./components/AppFooter.vue";
+import AppTopbar from "./components/AppTopbar.vue";
+import StatsWidget from "./components/dashboard/StatsWidget.vue";
+import SalesTrendWidget from "./components/dashboard/SalesTrendWidget.vue";
+import RecentActivityWidget from "./components/dashboard/RecentActivityWidget.vue";
+import ProductOverviewWidget from "./components/dashboard/ProductOverviewWidget.vue";
+</script>
+
 <template>
     <div class="bg-surface-50 dark:bg-surface-950 min-h-screen p-8 flex flex-col gap-6">
         <AppTopbar />
