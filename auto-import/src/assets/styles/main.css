@@ -204,6 +204,10 @@ body {
     color: #eab308;
 }
 
+.activity-icon.pink {
+    color: #ec4899;
+}
+
 .activity-content {
     display: flex;
     flex-direction: column;
@@ -481,6 +485,16 @@ body {
     border-radius: 9999px;
     padding: 0;
     cursor: pointer;
+}
+
+.selected {
+    --ring-offset-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color);
+    --ring-shadow: 0 0 0 calc(var(--ring-width) + var(--ring-offset-width)) var(--ring-color);
+    --ring-width: 2px;
+    --ring-offset-width: 2px;
+    --ring-color: var(--p-primary-500);
+    --ring-offset-color: #ffffff;
+    box-shadow: var(--ring-offset-shadow), var(--ring-shadow);
 }
 
 .hidden {
