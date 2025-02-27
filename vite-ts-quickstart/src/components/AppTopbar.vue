@@ -28,7 +28,7 @@ const { isDarkMode, toggleDarkMode } = useLayout();
                 </svg>
                 <span class="topbar-brand-text">
                     <span class="topbar-title">PrimeVue Examples</span>
-                    <span class="topbar-subtitle">Vite</span>
+                    <span class="topbar-subtitle">Vite TypeScript</span>
                 </span>
             </div>
             <div class="topbar-actions">
