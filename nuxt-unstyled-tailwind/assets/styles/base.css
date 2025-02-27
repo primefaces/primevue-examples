@@ -64,3 +64,7 @@
         --p-text-hover-muted-color: var(--p-surface-300);
     }
 }
+
+.p-dark {
+    color-scheme: dark;
+}
