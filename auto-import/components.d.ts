@@ -18,4 +18,8 @@ declare module "vue" {
         FloatLabel: typeof import("primevue/floatlabel")["default"];
         Tag: typeof import("primevue/tag")["default"];
     }
+
+    export interface ComponentCustomProperties {
+        StyleClass: typeof import("primevue/styleclass")["default"];
+    }
 }
