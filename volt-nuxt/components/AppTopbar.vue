@@ -1,5 +1,5 @@
 <script setup>
-import Button from "@/volt/button/index.vue";
+import Button from "@/volt/button";
 const { isDarkMode, toggleDarkMode } = useLayout();
 </script>
 

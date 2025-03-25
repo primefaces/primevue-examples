@@ -1,9 +1,9 @@
 <script setup>
-import { ref, watch, onMounted } from "vue";
-import DataTable from "@/volt/datatable/index.vue";
+import DataTable from "@/volt/datatable";
+import InputText from "@/volt/inputtext";
+import Tag from "@/volt/tag";
 import Column from "primevue/column";
-import InputText from "@/volt/inputtext/index.vue";
-import Tag from "@/volt/tag/index.vue";
+import { onMounted, ref, watch } from "vue";
 
 const products = ref([
     {
