@@ -2,6 +2,7 @@
 import DataTable from "@/volt/datatable";
 import InputText from "@/volt/inputtext";
 import Tag from "@/volt/tag";
+import Column from "primevue/column";
 import { onMounted, ref, watch } from "vue";
 
 const products = ref([
