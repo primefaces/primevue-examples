@@ -1,0 +1,27 @@
+{
+    "name": "volt-vite-tailwindv4",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@tailwindcss/vite": "^4.0.15",
+        "chart.js": "^4.4.8",
+        "primeicons": "^7.0.0",
+        "primevue": "^4.3.2",
+        "tailwind-merge": "^3.0.2",
+        "tailwindcss": "^4.0.15",
+        "tailwindcss-primeui": "^0.5.1",
+        "vue": "^3.5.13"
+    },
+    "devDependencies": {
+        "@primevue/auto-import-resolver": "^4.3.2",
+        "@vitejs/plugin-vue": "^5.2.1",
+        "unplugin-vue-components": "^28.4.1",
+        "vite": "^6.2.0"
+    }
+}
