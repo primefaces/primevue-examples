@@ -1,7 +1,7 @@
 <script setup>
-import DataTable from "@/volt/datatable";
-import InputText from "@/volt/inputtext";
-import Tag from "@/volt/tag";
+import DataTable from "@/volt/DataTable.vue";
+import InputText from "@/volt/InputText.vue";
+import Tag from "@/volt/Tag.vue";
 import Column from "primevue/column";
 import { onMounted, ref, watch } from "vue";
 
