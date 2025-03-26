@@ -9,19 +9,14 @@
     >
         <template
             #paginatorcontainer="{
-                first,
-                last,
-                rows,
                 page,
                 pageCount,
                 pageLinks,
-                totalRecords,
                 changePageCallback,
                 firstPageCallback,
                 lastPageCallback,
                 prevPageCallback,
                 nextPageCallback,
-                rowChangeCallback,
             }"
         >
             <div class="flex flex-wrap gap-2 items-center justify-center">
@@ -46,12 +41,12 @@
                         >{{ pageLink }}
                     </SecondaryButton>
                 </div>
-                <SecondaryButton text rounded @click="nextPageCallback" :disabled="page === pageCount - 1">
+                <SecondaryButton text rounded @click="nextPageCallback" :disabled="page === pageCount! - 1">
                     <template #icon>
                         <AngleRightIcon />
                     </template>
                 </SecondaryButton>
-                <SecondaryButton text rounded @click="lastPageCallback" :disabled="page === pageCount - 1">
+                <SecondaryButton text rounded @click="lastPageCallback" :disabled="page === pageCount! - 1">
                     <template #icon>
                         <AngleDoubleRightIcon />
                     </template>
@@ -67,37 +62,35 @@
     </DataTable>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import AngleDoubleLeftIcon from "@primevue/icons/angledoubleleft";
 import AngleDoubleRightIcon from "@primevue/icons/angledoubleright";
 import AngleLeftIcon from "@primevue/icons/angleleft";
 import AngleRightIcon from "@primevue/icons/angleright";
 import SpinnerIcon from "@primevue/icons/spinner";
-import DataTable from "primevue/datatable";
+import DataTable, { type DataTablePassThroughOptions, type DataTableProps } from "primevue/datatable";
 import { ref } from "vue";
-import SecondaryButton from "../button/secondary.vue";
-import { ptViewMerge } from "../utils";
+import SecondaryButton from "./SecondaryButton.vue";
+import { ptViewMerge } from "./utils";
 
-const theme = ref({
-    root: `relative`,
-    tableContainer: ``,
+interface Props extends /* @vue-ignore */ DataTableProps {}
+defineProps<Props>();
+
+const theme = ref<DataTablePassThroughOptions>({
+    root: `relative p-flex-scrollable:flex p-flex-scrollable:flex-col p-flex-scrollable:h-full`,
+    tableContainer: `p-scrollable:relative p-flex-scrollable:flex p-flex-scrollable:flex-col p-flex-scrollable:flex-1 p-flex-scrollable:h-full`,
     header: `py-3 px-4 border-b border-surface-200 dark:border-surface-700
         bg-surface-0 dark:bg-surface-900
         text-surface-700 dark:text-surface-0`,
-    table: `border-spacing-0 w-full`,
-    thead: ``,
-    headerRow: ``,
-    tbody: `p-hoverable:*:hover:bg-surface-100 p-hoverable:*:hover:text-surface-800 dark:p-hoverable:*:hover:bg-surface-800 dark:p-hoverable:*:hover:text-surface-0`,
+    table: `border-spacing-0 w-full border-separate`,
+    thead: `p-scrollable:bg-surface-0 dark:p-scrollable:bg-surface-900 p-scrollable:top-0 p-scrollable:z-10`,
+    tbody: `p-hoverable:*:hover:bg-surface-100 p-hoverable:*:hover:text-surface-800 dark:p-hoverable:*:hover:bg-surface-800 dark:p-hoverable:*:hover:text-surface-0
+        p-frozen:sticky p-frozen:z-10`,
     bodyRow: `bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-surface-0 p-selectable:cursor-pointer p-selected:bg-highlight!`,
-    tfoot: ``,
-    footerRow: ``,
+    tfoot: `p-scrollable:bg-surface-0 dark:p-scrollable:bg-surface-900 p-scrollable:bottom-0 p-scrollable:z-10`,
     footer: `py-3 px-4 border-b border-surface-200 dark:border-surface-700
         bg-surface-0 dark:bg-surface-900
         text-surface-700 dark:text-surface-0`,
-    columnGroup: ``,
-    row: ``,
-    rowExpansion: ``,
-    rowExpansionCell: ``,
     mask: `bg-black/50 text-surface-200 absolute z-10 flex items-center justify-center w-full h-full backdrop-blu-`,
     column: {
         root: ``,
@@ -109,14 +102,17 @@ const theme = ref({
             p-sortable:not-p-sorted:hover:bg-surface-100 p-sortable:not-p-sorted:hover:text-surface-800 
             dark:p-sortable:not-p-sorted:hover:bg-surface-800 dark:p-sortable:not-p-sorted:hover:text-surface-0
             p-sorted:bg-highlight
+            p-frozen:sticky p-frozen:bg-surface-0 dark:p-frozen:bg-surface-900 p-frozen:z-10
         `,
         columnHeaderContent: `flex items-center gap-2`,
         columnTitle: `font-semibold`,
-        bodyCell: `text-start py-3 px-4 border-b border-surface-200 dark:border-surface-800`,
+        bodyCell: `text-start py-3 px-4 border-b border-surface-200 dark:border-surface-800
+            p-frozen:sticky p-frozen:bg-surface-0 dark:p-frozen:bg-surface-900`,
         bodyCellContent: ``,
         footerCell: `text-start py-3 px-4 border-b border-surface-200 dark:border-surface-800
             bg-surface-0 dark:bg-surface-900
-            text-surface-700 dark:text-surface-0`,
+            text-surface-700 dark:text-surface-0
+            p-frozen:sticky p-frozen:bg-surface-0 dark:p-frozen:bg-surface-900`,
         columnFooter: `font-semibold`,
         columnResizer: `block absolute top-0 end-0 m-0 w-2 h-full p-0 cursor-col-resize border border-transparent`,
         sort: ``,
@@ -190,30 +186,15 @@ const theme = ref({
         rowToggleIcon: ``,
         reorderableRowHandle: ``,
     },
-    columnGroup: {
-        root: ``,
-    },
-    row: {
-        root: ``,
-    },
     loadingIcon: ``,
     pcPaginator: {
         paginatorContainer: `p-bottom:border-b border-surface-200 dark:border-surface-700`,
         root: `flex items-center justify-center flex-wrap py-2 px-4 rounded-md gap-1
             bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-surface-0`,
     },
-    virtualScroller: ``,
-    virtualScrollerSpacer: ``,
-    rowGroupHeader: ``,
-    rowGroupHeaderCell: ``,
-    rowGroupFooter: ``,
-    rowGroupFooterCell: ``,
-    emptyMessage: ``,
-    emptyMessageCell: ``,
     columnResizeIndicator: `w-px absolute z-10 hidden bg-primary`,
     rowReorderIndicatorUp: `absolute hidden`,
     rowReorderIndicatorDown: `absolute hidden`,
-    transition: {},
 });
 
 const el = ref();

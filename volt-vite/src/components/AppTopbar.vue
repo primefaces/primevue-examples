@@ -1,6 +1,6 @@
 <script setup>
-import { useLayout } from "@/composables/useLayout";
-import Button from "@/volt/button";
+import Button from "@/volt/Button.vue";
+import { useLayout } from "../composables/useLayout";
 import AppConfig from "./AppConfig.vue";
 
 const { isDarkMode, toggleDarkMode } = useLayout();
@@ -34,7 +34,7 @@ const { isDarkMode, toggleDarkMode } = useLayout();
                         >PrimeVue Examples</span
                     >
                     <span class="text-sm font-medium text-primary leading-tight"
-                        >Volt + Vite + Tailwindcss v4</span
+                        >Volt + Vite TypeScript Unstyled + Tailwindcss v4</span
                     ></span
                 >
             </div>
