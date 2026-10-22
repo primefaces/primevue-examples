@@ -1,0 +1,28 @@
+.orders {
+    max-width: 960px;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    color: var(--p-text-color);
+}
+
+.orders header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.orders h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.form {
+    display: grid;
+    gap: 8px;
+}
+
+.form label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 8px;
+}

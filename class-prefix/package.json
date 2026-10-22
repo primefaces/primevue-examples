@@ -1,0 +1,21 @@
+{
+    "name": "primevue-class-prefix",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@primeuix/themes": "^3.1.0",
+        "@primevue/core": "^5.0.4",
+        "primevue": "^5.0.4",
+        "vue": "^3.5.13"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^5.2.1",
+        "vite": "^6.0.7"
+    }
+}

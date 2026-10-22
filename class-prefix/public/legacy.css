@@ -1,0 +1,18 @@
+.p-button {
+    background: #f2c94c;
+    color: #2b2b2b;
+    border: 2px solid #2b2b2b;
+    border-radius: 0;
+    padding: 12px 22px;
+    font: 700 14px Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.p-inputtext {
+    border: 2px dashed #2b2b2b;
+    border-radius: 0;
+    padding: 12px;
+    font: 15px Georgia, serif;
+    background: #fffdf3;
+}

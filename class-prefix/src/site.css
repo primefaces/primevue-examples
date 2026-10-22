@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f6f8f9;
+    color: #1d2a33;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+main {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 64px 24px 48px;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0 0 12px;
+}
+
+.lead {
+    color: #5d6b75;
+    margin: 0 0 32px;
+    line-height: 1.6;
+}
+
+.site-footer {
+    border-top: 1px solid #dfe5e9;
+    padding: 32px 24px;
+    text-align: center;
+    color: #5d6b75;
+}
+
+.newsletter {
+    display: inline-flex;
+    gap: 8px;
+}

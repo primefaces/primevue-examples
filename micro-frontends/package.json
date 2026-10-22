@@ -1,0 +1,23 @@
+{
+    "name": "primevue-micro-frontends",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build:orders": "vite build --config vite.orders.config.js",
+        "build:customers": "vite build --config vite.customers.config.js",
+        "dev": "npm run build:orders && npm run build:customers && vite",
+        "build": "npm run build:orders && npm run build:customers && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@primeuix/themes": "^3.1.0",
+        "@primevue/core": "^5.0.4",
+        "primevue": "^5.0.4",
+        "vue": "^3.5.13"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^5.2.1",
+        "vite": "^6.0.7"
+    }
+}
