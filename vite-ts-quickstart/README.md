@@ -1,40 +1,20 @@
-# primevue-quickstart-create-vue-ts
+# PrimeVue with Vite and TypeScript
 
-This template should help get you started developing with Vue 3 in Vite.
+The same small [PrimeVue](https://primevue.dev) app as the Vite example, written in TypeScript: a top bar with a dark mode switch, a panel that changes the primary and surface colors, and a dashboard with a chart, a product table and a few stat cards. It uses styled mode with the Aura preset, and the components are imported automatically.
 
-## Recommended IDE Setup
+[Open in StackBlitz](https://stackblitz.com/github/primefaces/primevue-examples/tree/main/vite-ts-quickstart)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Run it
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Where to look
 
-```sh
-npm run build
-```
+- `src/main.ts` sets up PrimeVue with the Aura preset.
+- `vite.config.ts` adds `PrimeVueResolver`, so the templates use the components without import lines.
+- `src/composables/useLayout.js` switches dark mode and changes the colors at runtime.
+
+Read more in the [PrimeVue Vite guide](https://primevue.dev/vite).

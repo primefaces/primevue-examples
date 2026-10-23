@@ -1,7 +1,20 @@
-# Vue 3 + Vite
+# PrimeVue unstyled with Tailwind CSS
 
-This template should help get you started developing with Vue 3, PrimeVue and TailwindCSS in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A small [PrimeVue](https://primevue.dev) app with no PrimeVue theme loaded: a top bar with a dark mode switch, a panel that changes the primary and surface colors, and a dashboard with a chart, a product table and a few stat cards. The components get their look from Tailwind CSS v3 classes instead.
 
-## Recommended IDE Setup
+[Open in StackBlitz](https://stackblitz.com/github/primefaces/primevue-examples/tree/main/vite-unstyled-tailwind)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Run it
+
+```bash
+npm install
+npm run dev
+```
+
+## Where to look
+
+- `src/main.js` sets up PrimeVue with `theme: 'none'` and loads Tailwind and PrimeIcons.
+- `src/assets/tailwind.css` and `src/style.css` hold the styles the components use.
+- `vite.config.js` adds `PrimeVueResolver`, so the templates use the components without import lines.
+
+Read more in the [PrimeVue unstyled mode guide](https://primevue.dev/theming/unstyled).

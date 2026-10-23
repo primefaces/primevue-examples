@@ -1,75 +1,20 @@
-# Nuxt 3 Minimal Starter
+# PrimeVue with Nuxt and Tailwind CSS
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A small [PrimeVue](https://primevue.dev) app built with Nuxt, using the Aura preset and Tailwind CSS v3: a top bar with a dark mode switch, a panel that changes the primary and surface colors, and a dashboard with a chart, a product table and a few stat cards. `tailwindcss-primeui` lets the Tailwind utilities use the PrimeVue colors.
 
-## Setup
+[Open in StackBlitz](https://stackblitz.com/github/primefaces/primevue-examples/tree/main/nuxt-styled-tailwind)
 
-Make sure to install the dependencies:
+## Run it
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Where to look
 
-Build the application for production:
+- `nuxt.config.ts` adds `@nuxtjs/tailwindcss` and `@primevue/nuxt-module` with the Aura preset, and registers the `tailwindcss-primeui` plugin.
+- `app.vue` lays out the page.
+- `components/dashboard` holds the widgets.
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Read more in the [PrimeVue Tailwind guide](https://primevue.dev/tailwind).

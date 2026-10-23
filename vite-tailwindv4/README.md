@@ -1,69 +1,20 @@
-#  PrimeVue + TailwindCSS v4 Example
+# PrimeVue with Tailwind CSS v4
 
-## Overview
+A small [PrimeVue](https://primevue.dev) app that uses Tailwind CSS v4 next to the Aura preset: a top bar with a dark mode switch, a panel that changes the primary and surface colors, and a dashboard with a chart, a product table and a few stat cards. Tailwind handles the page layout, and `tailwindcss-primeui` lets its utilities use the PrimeVue colors.
 
-This example demonstrates how to integrate PrimeVue with TailwindCSS v4, showcasing a modern and responsive dashboard interface. The project features a dark/light theme toggle, responsive layout, and various PrimeVue components styled with TailwindCSS.
+[Open in StackBlitz](https://stackblitz.com/github/primefaces/primevue-examples/tree/main/vite-tailwindv4)
 
-## Features
-
-- Dark/Light theme support
-- Fully responsive design
-- PrimeVue components with TailwindCSS styling
-- Chart.js integration
-- Powered by Vite for fast development
-- Real-time search functionality
-- Customizable UI components
-
-## Tech Stack
-
-- [Vue.js](https://vuejs.org/) - The Progressive JavaScript Framework
-- [PrimeVue](https://primevue.org/) - The Ultimate Vue UI Component Library
-- [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework
-- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
-- [Chart.js](https://www.chartjs.org/) - Simple yet flexible JavaScript charting
-
-## Getting Started
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/primefaces/primevue-examples.git
-cd primevue-examples/vite-tailwindv4
-```
-
-2. Install dependencies:
+## Run it
 
 ```bash
 npm install
-```
-
-3. Start the development server:
-
-```bash
 npm run dev
 ```
 
-4. Build for production:
+## Where to look
 
-```bash
-npm run build
-```
+- `vite.config.js` adds the `@tailwindcss/vite` plugin and `PrimeVueResolver`.
+- `src/assets/styles/main.css` imports Tailwind and the `tailwindcss-primeui` plugin.
+- `src/main.js` sets up PrimeVue with the Aura preset.
 
-## Project Structure
-
-```
-vite-tailwindv4/
-├── src/
-│   ├── components/         # Vue components
-│   ├── composables/        # Vue composables
-│   ├── assets/            # Static assets
-│   └── App.vue            # Root component
-├── public/                # Public static assets
-├── index.html            # Entry HTML file
-└── vite.config.js        # Vite configuration
-```
-
-## Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/primefaces/primevue-examples/issues).
-
+Read more in the [PrimeVue Tailwind guide](https://primevue.dev/tailwind).

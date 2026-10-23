@@ -1,75 +1,20 @@
-# Nuxt 3 Minimal Starter
+# PrimeVue unstyled with Nuxt and Tailwind CSS
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A small [PrimeVue](https://primevue.dev) app built with Nuxt, with no PrimeVue theme loaded: a top bar with a dark mode switch, a panel that changes the primary and surface colors, and a dashboard with a chart, a product table and a few stat cards. The components get their look from Tailwind CSS v3 classes instead.
 
-## Setup
+[Open in StackBlitz](https://stackblitz.com/github/primefaces/primevue-examples/tree/main/nuxt-unstyled-tailwind)
 
-Make sure to install the dependencies:
+## Run it
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Where to look
 
-Build the application for production:
+- `nuxt.config.ts` adds `@primevue/nuxt-module` with `theme: 'none'`, so no PrimeVue theme styles are included. It also loads Tailwind and PrimeIcons.
+- `assets/styles/primevue` holds the Tailwind styles for each component, and `tailwind.config.js` maps the `dark` variant to `.p-dark`.
+- `components/dashboard` has the widgets.
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Read more in the [PrimeVue unstyled mode guide](https://primevue.dev/theming/unstyled).

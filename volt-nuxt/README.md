@@ -1,75 +1,20 @@
-# Nuxt Minimal Starter
+# Volt with Nuxt
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A small Nuxt app built with [Volt](https://volt.primevue.org), the PrimeVue components styled with Tailwind CSS v4. It has a top bar with a dark mode switch, a panel that changes the primary and surface colors, and a dashboard with a chart, a product table and a few stat cards. The Volt components are plain files in the project, so their Tailwind classes can be edited directly.
 
-## Setup
+[Open in StackBlitz](https://stackblitz.com/github/primefaces/primevue-examples/tree/main/volt-nuxt)
 
-Make sure to install dependencies:
+## Run it
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Where to look
 
-Build the application for production:
+- `plugins/primevue.js` sets up PrimeVue in unstyled mode.
+- `nuxt.config.ts` adds the `@tailwindcss/vite` plugin and the main stylesheet.
+- `components/dashboard` holds the widgets built from the Volt components.
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Read more in the [Volt docs](https://volt.primevue.org).

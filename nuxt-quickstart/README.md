@@ -1,63 +1,20 @@
-# Nuxt 3 Minimal Starter
+# PrimeVue with Nuxt
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A small [PrimeVue](https://primevue.dev) app built with Nuxt: a top bar with a dark mode switch, a panel that changes the primary and surface colors, and a dashboard with a chart, a product table and a few stat cards. The PrimeVue Nuxt module sets up the Aura preset and imports the components, and Tailwind CSS v4 handles the page layout.
 
-## Setup
+[Open in StackBlitz](https://stackblitz.com/github/primefaces/primevue-examples/tree/main/nuxt-quickstart)
 
-Make sure to install the dependencies:
+## Run it
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
 ```
 
-## Production
+## Where to look
 
-Build the application for production:
+- `nuxt.config.ts` adds `@primevue/nuxt-module` with the Aura preset and `autoImport: true`, and the `@tailwindcss/vite` plugin.
+- `app.vue` lays out the page.
+- `composables/use-layout.js` switches dark mode and changes the colors at runtime.
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Read more in the [PrimeVue Nuxt guide](https://primevue.dev/nuxt).

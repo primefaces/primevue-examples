@@ -7,7 +7,7 @@
     },
     "devDependencies": {
         "@inertiajs/vue3": "^2.0.0",
-        "@primevue/auto-import-resolver": "^5.0.0",
+        "@primevue/auto-import-resolver": "^5.0.4",
         "@vitejs/plugin-vue": "^5.0.0",
         "axios": "^1.7.4",
         "concurrently": "^9.0.1",
@@ -17,12 +17,12 @@
         "vue": "^3.4.0"
     },
     "dependencies": {
-        "@primeuix/themes": "^3.0.0",
+        "@primeuix/themes": "^3.1.0",
         "@tailwindcss/vite": "^4.0.9",
         "chart.js": "^4.4.8",
-        "primeicons": "^7.0.0",
-        "primevue": "^5.0.0",
+        "primeicons": "^8.0.2",
+        "primevue": "^5.0.4",
         "tailwindcss": "^4.0.9",
-        "tailwindcss-primeui": "^0.5.1"
+        "tailwindcss-primeui": "^0.6.1"
     }
 }

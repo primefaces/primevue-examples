@@ -10,14 +10,14 @@
         "type-check": "vue-tsc --noEmit"
     },
     "dependencies": {
-        "@primeuix/themes": "^3.0.0",
+        "@primeuix/themes": "^3.1.0",
         "chart.js": "^4.4.8",
-        "primeicons": "^7.0.0",
-        "primevue": "^5.0.0",
+        "primeicons": "^8.0.2",
+        "primevue": "^5.0.4",
         "vue": "^3.4.27"
     },
     "devDependencies": {
-        "@primevue/auto-import-resolver": "^5.0.0",
+        "@primevue/auto-import-resolver": "^5.0.4",
         "@types/node": "^20.14.2",
         "@vitejs/plugin-vue": "^5.0.5",
         "@vue/tsconfig": "^0.5.1",
